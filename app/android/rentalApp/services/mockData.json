@@ -1,0 +1,60 @@
+{
+    "restaurants": [
+      {
+        "id": 1,
+        "name": "Tasty Bites",
+        "cuisine": "Italian",
+        "rating": 4.5,
+        "distance": 0.3,
+        "address": "Olmazor",
+        "phone": "+998711234567",
+        "website": "https://www.tastybites.uz",
+        "image": "https://via.placeholder.com/300"
+      },
+      {
+        "id": 2,
+        "name": "Spice Garden",
+        "cuisine": "Indian",
+        "rating": 4.2,
+        "distance": 0.5,
+        "address": "Yunusobod",
+        "phone": "+998711234568",
+        "website": "https://www.spicegarden.uz",
+        "image": "https://via.placeholder.com/300"
+      },
+      {
+        "id": 3,
+        "name": "Sushi Delight",
+        "cuisine": "Japanese",
+        "rating": 4.7,
+        "distance": 0.8,
+        "address": "Chilonzor",
+        "phone": "+998711234569",
+        "website": "https://www.sushidelight.uz",
+        "image": "https://via.placeholder.com/300"
+      },
+      {
+        "id": 4,
+        "name": "Burger Palace",
+        "cuisine": "American",
+        "rating": 4.0,
+        "distance": 1.2,
+        "address": "Olmazor",
+        "phone": "+998711234570",
+        "website": "https://www.burgerpalace.uz",
+        "image": "https://via.placeholder.com/300"
+      },
+      {
+        "id": 5,
+        "name": "Mama Mia Pizzeria",
+        "cuisine": "Italian",
+        "rating": 4.6,
+        "distance": 1.5,
+        "address": "Yunusobod",
+        "phone": "+998711234571",
+        "website": "https://www.mamamiapizzeria.uz",
+        "image": "https://via.placeholder.com/300"
+      }
+    ]
+  }
+  
