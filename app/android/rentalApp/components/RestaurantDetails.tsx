@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ScrollView, View } from "react-native";
+import { ScrollView, View, TouchableOpacity, Linking } from "react-native";
 import { Text, Image, Box } from "native-base";
 
 type Restaurant = {
@@ -9,6 +9,9 @@ type Restaurant = {
   rating: number;
   distance: number;
   image: string;
+  phone: string;
+  address: string;
+  website: string;
 };
 
 const RestaurantDetails = ({ route }: any) => {
@@ -19,7 +22,7 @@ const RestaurantDetails = ({ route }: any) => {
   const fetchRestaurantDetails = async (restaurantId: number) => {
     try {
       const response = await fetch(
-        `https://restaurant.free.mockoapp.net/restaurants-list/`
+        `https://absolute-initially-slug.ngrok-free.app/get-all-restaurants/`
       );
       if (response.ok) {
         const restaurants: any = await response.json();
@@ -44,6 +47,8 @@ const RestaurantDetails = ({ route }: any) => {
     fetchRestaurantDetails(restaurantId);
   }, []);
 
+  console.log(restaurantDetails);
+
   return (
     <ScrollView style={{ backgroundColor: "#f2f7ff" }}>
       {restaurantDetails ? (
@@ -64,7 +69,20 @@ const RestaurantDetails = ({ route }: any) => {
             <Text fontSize={18} mb={2}>
               Rating: {restaurantDetails.rating}
             </Text>
-            <Text fontSize={18}>Distance: {restaurantDetails.distance} km</Text>
+            <Text fontSize={18} mb={2}>
+              Phone Number: {restaurantDetails.phone}{" "}
+            </Text>
+            <Text fontSize={18} mb={2}>
+              Address: {restaurantDetails.address}{" "}
+            </Text>
+            <TouchableOpacity
+              onPress={() => {
+                // Open the URL in the default browser when pressed
+                Linking.openURL(restaurantDetails.website);
+              }}
+            >
+              <Text fontSize={18}>Website: {restaurantDetails.website}</Text>
+            </TouchableOpacity>
           </Box>
         </View>
       ) : (
